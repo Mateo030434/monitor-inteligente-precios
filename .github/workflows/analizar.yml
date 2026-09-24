@@ -1,0 +1,24 @@
+name: Monitor Inteligente de Precios
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  analizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar análisis
+        run: python src/analizar_precios.py
