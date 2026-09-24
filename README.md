@@ -1,5 +1,5 @@
 # Mateo Murgueitio
 
-## Descripción
+## Carrera
 
 Administración de Empresas
